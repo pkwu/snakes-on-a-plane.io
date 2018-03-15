@@ -9,28 +9,15 @@ import {
 } from '../../lib/log';
 
 const config = {
+  connectionLimit: 20,
   user: process.env.NODE_ENV === 'production' ? process.env.AWS_USER : process.env.LOCAL_USER,
   host: process.env.NODE_ENV === 'production' ? process.env.AWS_HOST : process.env.LOCAL_HOST,
   database: process.env.NODE_ENV === 'production' ? process.env.AWS_DATABASE : process.env.LOCAL_DATABASE,
   password: process.env.NODE_ENV === 'production' ? process.env.AWS_PASSWORD : process.env.LOCAL_PASSWORD
 };
 
-const db = mysql.createConnection(config);
-
-db.on('connect', () => {
-  success(`successfully connected to mysql ${config.database}`);
-});
-
-db.on('remove', client => {
-  success(`successfully removed client= ${client}`)
-});
-
-db.on('error', err => {
-  error(`error in pg ${err}`);
-});
-
-db.connect();
-
+// const db = mysql.createConnection(config);
+const db = mysql.createPool(config);
 
 Promise.promisifyAll(db);
 

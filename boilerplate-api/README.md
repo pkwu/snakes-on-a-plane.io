@@ -1,12 +1,12 @@
 #Introduction
 
-## Install && Setup postgresql
+## Install && Setup mysql
 ```
-brew install postgresql
-brew services start postgresql
-createuser root
-createdb boilerplate
-psql boilerplate
+brew install mysql
+brew services start mysql
+mysql -u root
+create database boilerplate
+use boilerplate
 ```
 
 ## Setup Environment
