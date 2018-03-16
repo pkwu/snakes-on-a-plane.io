@@ -1,1 +1,1 @@
-# mySQLboilerplate.io
+# snakes-on-a-plane.io

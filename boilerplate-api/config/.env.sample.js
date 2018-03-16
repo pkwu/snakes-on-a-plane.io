@@ -5,7 +5,7 @@ const envBuild = {
     'PORT=3396',
     'LOCAL_USER=root',
     'LOCAL_HOST=localhost',
-    'LOCAL_DATABASE=boilerplate',
+    'LOCAL_DATABASE=snakes',
     'LOCAL_PASSWORD=',
     'LOCAL_PORT=5432',
     'AWS_USER=',
@@ -14,7 +14,7 @@ const envBuild = {
     'AWS_PASSWORD=',
     'AWS_PORT=',
     'SALT_ROUNDS=10',
-    'TOKEN_SECRET_KEY=boilerapi'
+    'TOKEN_SECRET_KEY=snakeapi'
   ]
 };
 
