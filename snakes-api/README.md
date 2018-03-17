@@ -6,7 +6,7 @@ brew install mysql
 brew services start mysql
 mysql -u root
 create database snakes
-use boilerplate
+use snakes
 ```
 
 ## Setup Environment
