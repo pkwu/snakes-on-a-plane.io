@@ -9,4 +9,4 @@ mongoose.connect('mongodb://localhost/snakes');
 const Snake = mongoose.model('Snake', { name: String });
 
 const python = new Snake({ name: 'Monty' });
-python.save().then( () => console.log('tssss'));
+python.save().then( () => success('mongo queries connected: tssss'));

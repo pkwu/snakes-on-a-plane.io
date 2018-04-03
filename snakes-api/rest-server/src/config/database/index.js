@@ -23,7 +23,7 @@ Promise.promisifyAll(db);
 
 db.queryAsync('SELECT 1 + 1 AS solution', function (error, results, fields) {
   if (error) throw error;
-  console.log('mySQL queries connected: ', results[0].solution === 2);
+  success('mySQL queries connected: ', results[0].solution === 2);
 });
 
 export default db;
