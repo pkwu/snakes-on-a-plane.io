@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import parser from 'body-parser';
 import helmet from 'helmet';
-import router from '../../routes';
+import router from '../../routes/index';
 
 const middleWare = [
   helmet(),
